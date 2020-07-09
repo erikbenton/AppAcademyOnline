@@ -4,11 +4,7 @@
 # 1 is the only number that divides both 25 and 12.
 
 def coprime?(num_1, num_2)
-  if num_1 < num_2
-    min = num_1
-  else
-    min = num_2
-  end
+  min = num_1 < num_2 ? num_1 : num_2
   (2..min).each do |div|
     return false if num_1 % div == 0 && num_2 % div == 0
   end
