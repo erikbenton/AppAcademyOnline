@@ -7,7 +7,9 @@
 # to be the same before and after calling your method.
 
 def replace_char_at!(str, char, idx)
-
+  return str if idx > str.length
+  str[idx] = char
+  str
 end
 
 
