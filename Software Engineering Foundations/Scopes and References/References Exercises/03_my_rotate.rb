@@ -11,16 +11,9 @@
 
 
 def my_rotate!(array, amt)
-  if amt < 0
-    (-amt).times do
-      el = array.pop()
-      array.unshift(el)
-    end
-  else
-    amt.times do
-      el = array.shift()
-      array.push(el)
-    end
+  temp_array = array.dup
+  (0...array.length).each do |idx|
+    array[(idx - amt)%array.length] = temp_array[idx]
   end
   array
 end
