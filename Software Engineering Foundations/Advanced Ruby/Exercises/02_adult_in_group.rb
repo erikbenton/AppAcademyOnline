@@ -3,8 +3,7 @@
 # The method should return false otherwise.
 
 def adult_in_group?(people)
-  ages = people.map { |hash| hash[:age] }
-  ages.any? { |age| age >= 18 }
+  people.any? { |person| person[:age] >= 18 }
 end
 
 people_1 = [

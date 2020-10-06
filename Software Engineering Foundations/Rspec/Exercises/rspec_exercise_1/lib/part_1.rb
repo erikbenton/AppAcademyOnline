@@ -21,3 +21,5 @@ def alternating_case(str)
   end
   words.join(" ")
 end
+
+puts alternating_case("My Main man bo-bandy")

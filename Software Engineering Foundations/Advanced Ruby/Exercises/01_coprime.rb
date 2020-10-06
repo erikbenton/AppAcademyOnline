@@ -3,10 +3,10 @@
 # The method should return false otherwise. For example coprime?(25, 12) is true because
 # 1 is the only number that divides both 25 and 12.
 
-def coprime?(num_1, num_2)
-  min = num_1 < num_2 ? num_1 : num_2
-  (2..min).each do |div|
-    return false if num_1 % div == 0 && num_2 % div == 0
+def coprime?(num1, num2)
+  min = num1 < num2 ? num1 : num2
+  (2...min).each do |div|
+    return false if num1 % div == 0 && num2 % div == 0
   end
   true
 end
